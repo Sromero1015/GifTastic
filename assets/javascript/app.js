@@ -13,12 +13,14 @@ $(document).ready(function () {
         event.preventDefault();
         var btnClicked = $(event.target);
         if ($(btnClicked).attr("data-person")) {
-            var person = $(btnClicked).attr("data-person");
-            searchGiphy(person);
+            var food = $(btnClicked).attr("data-person");
+            searchGiphy(food);
         };
         // In this case, the "this" keyword refers to the button that was clicked
 
     });
+
+    // Function below is set up to generate new buttons for GIFs to emerge based on the buttons' names
 
     function createNewBtn(btnTitle) {
         var newBtn = $("<button>");
@@ -50,13 +52,13 @@ $(document).ready(function () {
                         // Creating a paragraph tag with the result item's rating
                         var p = $("<p>").text("Rating: " + rating);
                         // Creating an image tag
-                        var personImage = $("<img>");
+                        var foodImage = $("<img>");
                         // Giving the image tag an src attribute of a proprty pulled off the
                         // result item
-                        personImage.attr("src", results[i].images.fixed_height.url);
+                        foodImage.attr("src", results[i].images.fixed_height.url);
                         // Appending the paragraph and personImage we created to the "gifDiv" div we created
                         gifDiv.append(p);
-                        gifDiv.append(personImage);
+                        gifDiv.append(foodImage);
                         // Prepending the gifDiv to the "#images" div in the HTML
                         $("#images").prepend(gifDiv);
                     }
