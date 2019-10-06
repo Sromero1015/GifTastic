@@ -1,0 +1,15 @@
+h1 {
+    background-color: black;
+    color: gold;
+    margin: 100px;
+    text-align: center;
+}
+
+#addBtn {
+    background-color: black;
+    color: gold;
+}
+
+body {
+    background-color: slategrey;
+}
